@@ -752,6 +752,9 @@ img.full-width {
 .copyright > div {
     margin: 15px 0;
 }
+.copyright .social-links {
+    text-align: center;
+}
 .copyright .social-links a {
     padding: 5px;
     color: #1a202c;

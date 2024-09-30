@@ -748,7 +748,10 @@ img.full-width {
     background: #6415ff;
     color: #fff;
     width: 100vw;
-    margin: 0 -15px;
+    margin: 0 -32px;
+    @media (max-width: 1270px){
+        margin: 0 -16px;
+    }
 }
 .page-footer > .row {
     padding: 5rem 0rem;

@@ -4,7 +4,7 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     color: #243e63;
-    padding: 0;
+    padding: 0 15px;
     max-width: 1920px;
     margin: auto;
     --tw-translate-x: 0;
@@ -19,7 +19,7 @@ body {
     width: 100%;
     max-width: 1250px;
     margin: auto;
-    padding: 0 15px;
+    padding: 0;
 }
 ul{
     padding-left: 0;
@@ -264,7 +264,8 @@ img.full-width {
     color: #6415ff;
 }
 .top-section{
-    padding: 96px 15px;
+    padding: 96px 0px;
+    width: 100%;
 }
 .top-section p {
     color: #1a202c;
@@ -350,7 +351,7 @@ img.full-width {
     opacity: 0.05;
 }
 .features-section {
-    padding: 96px 15px;
+    padding: 96px 0;
     text-align: center;
 }
 .features-section .flex-row-container{
@@ -395,7 +396,7 @@ img.full-width {
     font-weight: 500;
 }
 .middle-content {
-    padding: 94px 15px;
+    padding: 94px 0;
 }
 .middle-content > .flex-row-container {
     padding: 96px 15px;
@@ -697,7 +698,7 @@ img.full-width {
 }
 
 #contact {
-    padding: 96px 15px;
+    padding: 96px 0;
 }
 #contact > .flex-row-container {
     background-color: #6415ff;
@@ -745,9 +746,12 @@ img.full-width {
 /* footer edits here */
 .page-footer {
     background: #6415ff;
-    padding: 5rem 2rem;
     color: #fff;
-    width: 100%;
+    width: 100vw;
+    margin: 0 -15px;
+}
+.page-footer > .row {
+    padding: 5rem 0rem;
 }
 .page-footer .flex-row-container.footer-links {
     justify-content: space-evenly;

@@ -93,6 +93,9 @@ nav {
 .logo:hover {
     text-decoration: none;
 }
+.top-row {
+    margin-bottom: 96px;
+}
 
 .top-row .menu-link {
     transition-property: background-color, text-decoration, border-color, color, fill, stroke, opacity, box-shadow, transform;

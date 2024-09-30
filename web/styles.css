@@ -7,7 +7,6 @@ body {
     padding: 0;
     max-width: 1920px;
     margin: auto;
-    overflow-x: hidden;
     --tw-translate-x: 0;
     --tw-translate-y: 0;
     --tw-skew-x: 0;
@@ -134,6 +133,7 @@ nav {
     transition: all 300ms ease;
     opacity: 0;
     transform: translate(100%);
+    display: none;
   }
   
   .menu--open {
@@ -143,8 +143,10 @@ nav {
   
   .menu--open .menu__backdrop {
     visibility: visible;
+    display: block;
     opacity: 1;
     transform: translate(0);
+    width: 106vw;
   }
   
   .menu__links {
@@ -178,6 +180,12 @@ nav {
     
     @media (max-width: 770px) {
         flex-direction: row;
+        justify-content: center;
+    }
+}
+li.flex-row-container {
+    @media (max-width: 770px) {
+        justify-content: center;
     }
 }
 .flex-row-container > div {
@@ -248,12 +256,15 @@ img.full-width {
     font-weight: 700;
     line-height: 1.25;
     color: #1a202c;
+    @media (max-width: 770px) {
+        text-align: center;
+    }
 }
 .banner-title span {
     color: #6415ff;
 }
 .top-section{
-    padding: 96px 0;
+    padding: 96px 15px;
 }
 .top-section p {
     color: #1a202c;
@@ -308,7 +319,7 @@ img.full-width {
     font-weight: 700;
     color: rgb(226, 232, 240);
     font-size: 16px;
-    @media (max-width: 900px) and (min-width: 770px) {
+    @media (max-width: 900px) {
         position: relative;
     }
 }
@@ -339,7 +350,7 @@ img.full-width {
     opacity: 0.05;
 }
 .features-section {
-    padding: 96px 0;
+    padding: 96px 15px;
     text-align: center;
 }
 .features-section .flex-row-container{
@@ -350,6 +361,9 @@ img.full-width {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 700;
+    @media (max-width: 770px) {
+        text-align: center;
+    }
 }
 .flex-row-container .imageContainer {
     flex-direction: column;
@@ -381,10 +395,10 @@ img.full-width {
     font-weight: 500;
 }
 .middle-content {
-    padding: 94px 0;
+    padding: 94px 15px;
 }
 .middle-content > .flex-row-container {
-    padding: 96px 0;
+    padding: 96px 15px;
 }
 .hvcIht {
     position: absolute;
@@ -443,6 +457,9 @@ img.full-width {
 .pricing-row {
     justify-content: space-evenly;
     margin-top: 64px;
+    @media (max-width: 770px) {
+        justify-content: center;
+    }
 }
 .pricing-column {
     display: flex;
@@ -583,23 +600,52 @@ img.full-width {
 }
 .testimonial-profile {
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
 }
 .testimonial-name {
     flex-direction: column;
     align-items:flex-start;
     margin-top: 10px;
     justify-content: left;
+    margin-left: 10px;
 }
 .testimonial-name .name {
     color: #243e63;
     font-weight: 700;
     font-size: 20px;
+    
 }
 .testimonial-name p {
     margin-top: 0;
     font-weight: 500;
 }
+
+.testimonial-control {
+    justify-content: space-between;
+    text-align: center;
+}
+.testimonial-control > i {
+    color: #6415ff;
+    background-color: #edf2f7;
+    padding: 15px;
+    border-radius: 900px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+.testimonial-control i:hover {
+    background-color: rgb(226,232,240);
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+.testimonial-control .divider {
+    border-right: 1px solid rgb(237 242 247);
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    margin-right: 5px;
+}
+
 #faq {
     text-align: center;
     margin-top: 94px;
@@ -620,18 +666,18 @@ img.full-width {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f078";
-    float: right;
     transition: all 3s ease-in-out;
 }
 .faq-section.active .question:after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f077";
-    float: right;
 }
 .faq-section .question {
     font-weight: 600;
     font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
 }
 .faq-section .answer {
     font-size: 0;
@@ -640,6 +686,7 @@ img.full-width {
     opacity: 0;
     z-index: -1;
     transition: visibility, opacity, font-size 1s ease-out;
+    width: 100%;
 }
 .faq-section.active .answer {
     font-size: initial;
@@ -650,7 +697,7 @@ img.full-width {
 }
 
 #contact {
-    padding: 96px 0;
+    padding: 96px 15px;
 }
 #contact > .flex-row-container {
     background-color: #6415ff;
@@ -700,6 +747,7 @@ img.full-width {
     background: #6415ff;
     padding: 5rem 2rem;
     color: #fff;
+    width: 100%;
 }
 .page-footer .flex-row-container.footer-links {
     justify-content: space-evenly;
